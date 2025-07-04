@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ModsVault – Coming Soon</title>
+    {{ content_for_header }}
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap" rel="stylesheet">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        min-height: 100vh;
+        min-width: 100vw;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #f7c7a3 0%, #e86d5a 100%);
+        color: #222;
+        font-family: 'Montserrat', 'SF Pro Display', 'Segoe UI', Arial, sans-serif;
+        flex-direction: column;
+        position: relative;
+      }
+      body > *:not(.coming-soon):not(.animated-bg) {
+        display: none !important;
+      }
+      .animated-bg { display: none; }
+      .coming-soon {
+        background: #fff;
+        border-radius: 2rem;
+        box-shadow: 0 4px 32px 0 #0002;
+        padding: 2.5rem 2.2rem 2.2rem 2.2rem;
+        max-width: 410px;
+        width: 95vw;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .logo-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.1rem;
+        margin-bottom: 1.7rem;
+      }
+      .logo-img {
+        width: 68px;
+        height: auto;
+        margin-bottom: 0;
+        box-shadow: none;
+        display: block;
+        border-radius: 0;
+        background: transparent;
+        object-fit: contain;
+        padding: 0;
+      }
+      .headline {
+        font-family: 'Montserrat', 'SF Pro Display', 'Segoe UI', Arial, sans-serif;
+        font-weight: 800;
+        font-style: italic;
+        font-size: 2.1rem;
+        color: #e86d5a;
+        margin-bottom: 0.7rem;
+        letter-spacing: 0.01em;
+        line-height: 1.1;
+      }
+      .coming-bold {
+        font-family: 'Montserrat', 'SF Pro Display', 'Segoe UI', Arial, sans-serif;
+        font-weight: 800;
+        font-style: italic;
+        font-size: 1.25rem;
+        color: #222;
+        margin-bottom: 1.1rem;
+        letter-spacing: 0.01em;
+      }
+      .soon {
+        font-family: 'Montserrat', 'SF Pro Display', 'Segoe UI', Arial, sans-serif;
+        font-weight: 400;
+        font-size: 1.05rem;
+        color: #444;
+        margin-bottom: 1.2rem;
+        line-height: 1.5;
+      }
+      .desc {
+        font-family: 'Montserrat', 'SF Pro Display', 'Segoe UI', Arial, sans-serif;
+        font-weight: 400;
+        font-size: 0.98rem;
+        color: #888;
+        margin-bottom: 0.5rem;
+        line-height: 1.5;
+      }
+      @media (max-width: 600px) {
+        .coming-soon {
+          padding: 1.5rem 0.5rem;
+          max-width: 98vw;
+        }
+        .logo-img {
+          width: 64px;
+          margin-bottom: 0.7rem;
+        }
+        .headline {
+          font-size: 1.1rem;
+        }
+        .coming-bold {
+          font-size: 1.05rem;
+        }
+        .soon, .desc {
+          font-size: 0.95rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="animated-bg"></div>
+    <div class="coming-soon">
+      <div class="logo-row">
+        <img src="https://i.postimg.cc/fTbjswKy/logo-1.png" alt="ModsVault Logo" class="logo-img" loading="eager" />
+        <div class="headline">ModsVault</div>
+      </div>
+      <span class="coming-bold">Coming Soon</span>
+      <div class="soon">Your premium destination for next-level game modding.</div>
+      <div class="desc">Curated mods, exclusive save files, and pro tools for PlayStation & PC.<br>Stay tuned for launch.</div>
+    </div>
+    {{ content_for_layout }}
+  </body>
+</html>
