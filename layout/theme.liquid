@@ -11,81 +11,66 @@
         height: 100%;
         margin: 0;
         padding: 0;
-        font-family: 'Montserrat', 'Segoe UI', sans-serif;
+        font-family: 'system-ui';
         background: linear-gradient(135deg, #f7c7a3, #e86d5a);
         color: #222;
+        font-style: normal;
       }
-     body > *:not(.coming-soon-layout):not(.animated-bg) {
-  display: none !important;
-}
+      body > *:not(.coming-soon-layout):not(.animated-bg) {
+        display: none !important;
+      }
       .animated-bg { display: none; }
-      
-     
-     .container {
+      .container {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         height: 100vh;
         padding: 0 8vw;
         box-sizing: border-box;
       }
-
-      .left-content {
+      .center-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
         max-width: 600px;
       }
-
-      .headline {
-        font-weight: 800;
-        font-style: italic;
-        font-size: 3rem;
-        color: #922d1d;
-        margin-bottom: 1rem;
+      .logo-img {
+        width: 400px;
+        max-width: 40vw;
+        object-fit: contain;
+        margin-bottom: 1.5rem;
       }
-
       .coming-bold {
         font-weight: 700;
         font-size: 1.6rem;
         margin-bottom: 1rem;
+        text-align: center;
       }
-
       .soon {
         font-weight: 600;
         font-size: 1.1rem;
         color: #000;
         margin-bottom: 1rem;
+        text-align: center;
       }
-
       .desc {
         font-weight: 400;
         font-size: 1rem;
         color: #f4f4f4;
         line-height: 1.6;
+        text-align: center;
       }
-
-      .logo-img {
-        width: 400px;
-        max-width: 40vw;
-        object-fit: contain;
-      }
-
       @media (max-width: 768px) {
         .container {
-          flex-direction: column;
-          justify-content: center;
-          text-align: center;
-          gap: 2rem;
+          padding: 0 2vw;
         }
-
-        .left-content {
+        .center-content {
           max-width: 90vw;
         }
-
-        .headline {
-          font-size: 2rem;
-        }
-
         .logo-img {
-          width: 160px;
+          max-width: 260px;
         }
       }
     </style>
@@ -93,16 +78,15 @@
   <body>
   <div class="coming-soon-layout">
     <div class="container">
-      <div class="left-content">
-        <div class="headline">ModsVault</div>
+      <div class="center-content">
+        <img src="https://i.postimg.cc/fTbjswKy/logo-1.png" alt="ModsVault Logo" class="logo-img" loading="eager" />
         <div class="coming-bold">Coming Soon</div>
         <div class="soon">Your premium destination for next-level game modding.</div>
         <div class="desc">
-          Curated mods, exclusive save files, and pro tools for PlayStation & PC.<br>
+          Curated mods, exclusive save files, and pro tools for PlayStation & PC & XBOX.<br>
           Stay tuned for launch.
         </div>
       </div>
-      <img src="https://i.postimg.cc/fTbjswKy/logo-1.png" alt="ModsVault Logo" class="logo-img" loading="eager" />
     </div>
   </div>
 
