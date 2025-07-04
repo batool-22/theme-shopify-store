@@ -11,122 +11,101 @@
         height: 100%;
         margin: 0;
         padding: 0;
-      }
-      body {
-        min-height: 100vh;
-        min-width: 100vw;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: linear-gradient(135deg, #f7c7a3 0%, #e86d5a 100%);
+        font-family: 'Montserrat', 'Segoe UI', sans-serif;
+        background: linear-gradient(135deg, #f7c7a3, #e86d5a);
         color: #222;
-        font-family: 'Montserrat', 'SF Pro Display', 'Segoe UI', Arial, sans-serif;
-        flex-direction: column;
-        position: relative;
       }
-      body > *:not(.coming-soon):not(.animated-bg) {
-        display: none !important;
-      }
+     body > *:not(.coming-soon-layout):not(.animated-bg) {
+  display: none !important;
+}
       .animated-bg { display: none; }
-      .coming-soon {
-        background: #fff;
-        border-radius: 2rem;
-        box-shadow: 0 4px 32px 0 #0002;
-        padding: 2.5rem 2.2rem 2.2rem 2.2rem;
-        max-width: 410px;
-        width: 95vw;
-        margin: 0 auto;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .logo-row {
+      
+     
+     .container {
         display: flex;
         align-items: center;
-        justify-content: center;
-        gap: 1.1rem;
-        margin-bottom: 1.7rem;
+        justify-content: space-between;
+        height: 100vh;
+        padding: 0 8vw;
+        box-sizing: border-box;
       }
-      .logo-img {
-        width: 68px;
-        height: auto;
-        margin-bottom: 0;
-        box-shadow: none;
-        display: block;
-        border-radius: 0;
-        background: transparent;
-        object-fit: contain;
-        padding: 0;
+
+      .left-content {
+        max-width: 600px;
       }
+
       .headline {
-        font-family: 'Montserrat', 'SF Pro Display', 'Segoe UI', Arial, sans-serif;
         font-weight: 800;
         font-style: italic;
-        font-size: 2.1rem;
-        color: #e86d5a;
-        margin-bottom: 0.7rem;
-        letter-spacing: 0.01em;
-        line-height: 1.1;
+        font-size: 3rem;
+        color: #922d1d;
+        margin-bottom: 1rem;
       }
+
       .coming-bold {
-        font-family: 'Montserrat', 'SF Pro Display', 'Segoe UI', Arial, sans-serif;
-        font-weight: 800;
-        font-style: italic;
-        font-size: 1.25rem;
-        color: #222;
-        margin-bottom: 1.1rem;
-        letter-spacing: 0.01em;
+        font-weight: 700;
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
       }
+
       .soon {
-        font-family: 'Montserrat', 'SF Pro Display', 'Segoe UI', Arial, sans-serif;
-        font-weight: 400;
-        font-size: 1.05rem;
-        color: #444;
-        margin-bottom: 1.2rem;
-        line-height: 1.5;
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: #000;
+        margin-bottom: 1rem;
       }
+
       .desc {
-        font-family: 'Montserrat', 'SF Pro Display', 'Segoe UI', Arial, sans-serif;
         font-weight: 400;
-        font-size: 0.98rem;
-        color: #888;
-        margin-bottom: 0.5rem;
-        line-height: 1.5;
+        font-size: 1rem;
+        color: #f4f4f4;
+        line-height: 1.6;
       }
-      @media (max-width: 600px) {
-        .coming-soon {
-          padding: 1.5rem 0.5rem;
-          max-width: 98vw;
+
+      .logo-img {
+        width: 400px;
+        max-width: 40vw;
+        object-fit: contain;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          gap: 2rem;
         }
-        .logo-img {
-          width: 64px;
-          margin-bottom: 0.7rem;
+
+        .left-content {
+          max-width: 90vw;
         }
+
         .headline {
-          font-size: 1.1rem;
+          font-size: 2rem;
         }
-        .coming-bold {
-          font-size: 1.05rem;
-        }
-        .soon, .desc {
-          font-size: 0.95rem;
+
+        .logo-img {
+          width: 160px;
         }
       }
     </style>
   </head>
   <body>
-    <div class="animated-bg"></div>
-    <div class="coming-soon">
-      <div class="logo-row">
-        <img src="https://i.postimg.cc/fTbjswKy/logo-1.png" alt="ModsVault Logo" class="logo-img" loading="eager" />
+  <div class="coming-soon-layout">
+    <div class="container">
+      <div class="left-content">
         <div class="headline">ModsVault</div>
+        <div class="coming-bold">Coming Soon</div>
+        <div class="soon">Your premium destination for next-level game modding.</div>
+        <div class="desc">
+          Curated mods, exclusive save files, and pro tools for PlayStation & PC.<br>
+          Stay tuned for launch.
+        </div>
       </div>
-      <span class="coming-bold">Coming Soon</span>
-      <div class="soon">Your premium destination for next-level game modding.</div>
-      <div class="desc">Curated mods, exclusive save files, and pro tools for PlayStation & PC.<br>Stay tuned for launch.</div>
+      <img src="https://i.postimg.cc/fTbjswKy/logo-1.png" alt="ModsVault Logo" class="logo-img" loading="eager" />
     </div>
-    {{ content_for_layout }}
-  </body>
+  </div>
+
+  {{ content_for_layout }}
+</body>
 </html>
